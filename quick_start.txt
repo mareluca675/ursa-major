@@ -1,0 +1,39 @@
+BEAR DETECTION APP - QUICK START GUIDE
+======================================
+
+FASTEST WAY TO START (Windows):
+1. Double-click "run_app.bat"
+2. Wait for installation (first time only, ~5 minutes)
+3. The app will start automatically
+
+MANUAL SETUP:
+1. Open Command Prompt in this folder
+2. Run: python setup.py (to check your system)
+3. Run: python -m venv venv
+4. Run: venv\Scripts\activate
+5. Run: pip install -r requirements.txt
+6. Run: python main.py
+
+USING THE APP:
+- Green status = No bear detected
+- Red status = BEAR DETECTED!
+- Use the confidence slider to adjust sensitivity
+- Click "Take Snapshot" to save images
+- Check the detection log for history
+
+TROUBLESHOOTING:
+- No camera? Check if other apps are using it
+- Slow performance? Lower confidence threshold
+- Not detecting bears? Try threshold around 30-40%
+
+NOTES:
+- First run downloads the AI model (~50MB)
+- Works best with good lighting
+- For testing, show bear images on your phone to the camera
+
+FILES CREATED:
+- logs/ → Application logs
+- snapshots/ → Saved images
+- yolov8s.pt → AI model (auto-downloaded)
+
+Happy bear detecting! 🐻
