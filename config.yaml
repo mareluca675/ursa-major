@@ -1,0 +1,56 @@
+# Bear Detection Application Configuration
+
+# Model settings
+model:
+  name: "yolov8s.pt"  # Can use yolov8n.pt for faster/lighter, yolov8m.pt for better accuracy
+  confidence_threshold: 0.5
+  iou_threshold: 0.45
+  device: "auto"  # auto, cpu, or 0 (for GPU 0)
+
+# Camera settings
+camera:
+  source: 0  # 0 for default webcam, or path to video file
+  resolution:
+    width: 1280
+    height: 720
+  fps: 30
+  buffer_size: 128
+
+# GUI settings
+gui:
+  window_title: "Bear Detection System"
+  window_size:
+    width: 1200
+    height: 800
+  theme: "dark"  # dark or light
+  show_fps: true
+  show_confidence: true
+  draw_boxes: true
+
+# Detection settings
+detection:
+  target_classes: ["bear"]  # List of classes to detect
+  alert_on_detection: true
+  save_detections: false
+  detection_log_path: "./logs/detections.log"
+
+# Hardware integration (for future Arduino support)
+hardware:
+  enabled: false
+  serial_port: "COM3"  # Windows: COM3, Linux: /dev/ttyUSB0
+  baud_rate: 9600
+  alert_duration_ms: 1000
+
+# Logging settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file_path: "./logs/app.log"
+  max_file_size_mb: 10
+  backup_count: 5
+
+# Performance settings
+performance:
+  use_gpu: true
+  optimize_for_speed: true  # true for real-time, false for accuracy
+  max_fps: 60
+  thread_pool_size: 4
